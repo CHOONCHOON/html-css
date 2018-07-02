@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+  <title>주식 기초개념</title>
+  <meta charset="utf-8">
+  <script>
+  function setColor(color){
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+     alist[i].style.color = color;
+     i=i+1;
+    }
+  }
+  function nightDayHandler(self){
+    var target = document.querySelector('body');
+  if (self.value ==='night') {
+      target.style.backgroundColor = 'black';
+      self.value ='day';
+      target.style.color = 'white';
+  setColor('powderblue');
+
+     }
+      else{
+          target.style.backgroundColor = 'white';
+          self.value ='night';
+          target.style.color = 'black';
+          var alist = document.querySelectorAll('a');
+          var i = 0;
+          while(i < alist.length){
+            alist[i].style.color = 'blue';
+            i=i+1;
+          }
+         }
+       }
+  </script>
+</head>
+
+<body>
+  <h1><a href="index.html">STOCK words</a></h1>
+  <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor = 'black';
+    document.querySelector('body').style.color = 'white';
+
+  ">
+  <!-- querySelector s가 대문자  backgroundColor c 가 대문자-->
+  <input type="button" value="day" onclick="
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  ">
+  <input id="night_day" type="button" value="night" onclick="
+  if (document.querySelector('#night_day').value ==='night') {
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.color = 'white';
+  document.querySelector('#night_day').value ='day'
+}
+  else{
+  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.color = 'black';
+  document.querySelector('#night_day').value ='night'
+
+    }
+  ">
+  <ol>
+    <li><a href="1.html">PER</a></li>
+    <li><a href="2.html">PBR</a></li>
+    <li><a href="3.html">EPS</a></li>
+  </ol>
+
+
+  <h2>PBR이란 무엇인가?</h2>
+  <strong><u>주가순자산비율</u></strong>
+  <p>
+    PBR, 주가를 주당순자산가치(BPS, book value per share)로 나눈
+    비율로 주가와 1주당 순자산을 비교한 수치이다.
+    즉 주가가 순자산(자본금과 자본잉여금,
+    이익잉여금의 합계)에 비해 1주당 몇 배로 거래되고 있는지를 측정하는 지표이다.
+</p>
+  <p style="margin-top:45px;">순자산이란 대차대조표의 총자본 또는 자산에서 부채(유동부채+고정부채)를 차감한 후의 금액을 말한다.
+
+장부상의 가치로 회사 청산시 주주가 배당받을 수 있는 자산의 가치를 의미한다. 따라서 PBR은 재무내용면에서 주가를 판단하는 척도이다.
+ </p>
+
+ <input id="night_day" type="button" value="night" onclick="
+   nightDayHandler(this);
+ ">
+
+ <input id="night_day" type="button" value="night" onclick="
+  nightDayHandler(this);
+ ">
+</body>
+</html>
